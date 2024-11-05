@@ -1,0 +1,11 @@
+{
+    "nni": true,
+    "seed": 0,
+    "batch_size": 256,
+    "hidden_dim1": 128,
+    "hidden_dim2": 32,
+    "latent_dim": 2,
+    "epochs": 100,
+    "learning_rate": 4e-3,
+    "dropout_ratio": 0.3
+}
