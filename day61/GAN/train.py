@@ -1,5 +1,5 @@
 from src.data import MNISTDataset, MNISTDataModule
-from src.model.vae import Encoder, Decoder, VAE
+from src.model.gan import Discriminator, Generator
 from src.training import MNISTModule
 
 import numpy as np
@@ -56,27 +56,22 @@ def main(configs):
     configs.update({
         'input_dim': train[0][0].shape[1]*train[0][0].shape[2],
     })
-    encoder = Encoder(configs)
-    decoder = Decoder(configs)
-    model = VAE(encoder, decoder)
+    discriminator = Discriminator(configs)
+    generator = Generator(configs)
 
     # LightningModule 인스턴스 생성
     mnist_module = MNISTModule(
-        model=model,
-        learning_rate=configs.get('learning_rate'),
+        discriminator=discriminator,
+        generator=generator,
+        configs=configs,
     )
 
     # Trainer 인스턴스 생성 및 설정
-    del configs['output_dim'], configs['seed'], configs['epochs']
-    exp_name = ','.join([f'{key}={value}' for key, value in configs.items()])
     trainer_args = {
         'max_epochs': configs.get('epochs'),
-        'callbacks': [
-            EarlyStopping(monitor='loss/val_loss', mode='min', patience=10)
-        ],
         'logger': TensorBoardLogger(
             'tensorboard',
-            f'FashionMNIST/{exp_name}',
+            f'MNIST/gan',
         ),
     }
 
@@ -97,7 +92,7 @@ if __name__ == '__main__':
     device = 'gpu' if torch.cuda.is_available() else 'cpu'
 
     # hyperparameter
-    with open('day61/MNIST/configs.json', 'r') as file:
+    with open('./configs.json', 'r') as file:
         configs = json.load(file)
     configs.update({'device': device})
 

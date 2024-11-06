@@ -1,9 +1,8 @@
-import torch
-from torch.utils.data import DataLoader, Dataset
 import lightning as L
+from torch.utils.data import DataLoader, Dataset
 
 
-class FashionMNISTDataset(Dataset):
+class MNISTDataset(Dataset):
     def __init__(self, data):  # 생성자 메서드
         super().__init__()  # 부모 클래스의 생성자를 호출하여 초기화
         self.data = data  # 데이터프레임을 저장
@@ -23,7 +22,7 @@ class FashionMNISTDataset(Dataset):
         }
 
 
-class FashionMNISTDataModule(L.LightningDataModule):
+class MNISTDataModule(L.LightningDataModule):
     def __init__(self, batch_size: int):
         super().__init__()
         self.batch_size = batch_size  # 배치 크기를 저장
