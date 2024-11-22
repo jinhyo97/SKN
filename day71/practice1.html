@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Hello, world!</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body>
+        <h1> AI </h1>
+            <h2> Machine Learning </h2>
+                <img src="https://miro.medium.com/v2/resize:fit:2796/1*FUZS9K4JPqzfXDcC83BQTw.png" alt="machine learning category" width=700> 
+                <div id="supervised_learning">
+                    <h3> Supervised Learning </h3>
+                        <p> <b> 지도학습 </b></p>
+                        <p> <strong> label </strong> 이 주어짐 </p>
+
+                        <p> 종류 </p>
+                        <ul>
+                            <li style="color: red"> 서포트 벡터 머신 (support vector machine) </li>
+                            <li> 은닉 마르코프 모델 (Hidden Markov model) </li>
+                            <li> 회귀 분석 (Regression) </li>
+                            <li> 신경망 (Neural network) </li>
+                            <li> 나이브 베이즈 분류 (Naive Bayes Classification) </li>
+                        </ul>
+                </div>
+                <img src="https://media.licdn.com/dms/image/v2/D5612AQGrXjLDQg8Rdw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1715248331357?e=2147483647&v=beta&t=c8wqZuKToU5iJpWRxuSkKaQT_qFLlzvCOmTifhLnYhA" width=700>
+                <div id="unsupervised_learning">
+                    <h3> Unsupervised Learning </h3>
+                    <i> 비지도학습 </i>
+                    <br>
+                    <em> label </em> 이 없음
+
+                    <p> 종류 </p>
+                    <ol>
+                        <li> hierarchical clustering </li>
+                        <li> dbscan </li>
+                        <li> kmeans </li>
+                    </ol>                    
+                </div>
+                <img src="https://techvidvan.com/tutorials/wp-content/uploads/2020/08/Reinforcement-Learning-in-ML-TV.jpg" width=700>
+                <div id="reinforcement_learning">
+                    <h3> Reinforcement Learning </h3>
+                    <p> <u> 강화학습 </u> </p>
+                    <p> 보상을 최대화 </p>
+
+                    <p> 종류 </p>
+                    <ul>
+                        <li> model-free RL </li>
+                        <li> model-based RL </li>
+                    </ul>
+
+                    <p> model-free RL </p>
+                    <ol>
+                        <li> Value Iteration </li>
+                        <li> Policy Iteration </li>
+                    </ol>
+
+                    <p> model-based RL </p>
+                    <ol>
+                        <li> Given the Model </li>
+                        <li> Learn the Model </li>
+                    </ol>
+
+                    <table>
+                        <tr>
+                            <th> Given the Model </th>
+                            <th> Learn the Model </th>
+                        </tr>
+                        <tr>
+                            <td> Dyna-Q </td>
+                            <td> World Models </td>
+                        </tr>
+                        <tr>
+                            <td> Alpha Zero </td>
+                            <td> I2A </td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td> MBMF </td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td> MBVE </td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <table>
+                    <tr>
+                        <th> 이름 </th>
+                        <th> 나이 </th>
+                        <th> 성별 </th>
+                    </tr>
+                    <tr>
+                        <th> 권오셈 </th>
+                        <th> 20 </th>
+                        <th> 남 </th>
+                    </tr>
+                    <tr>
+                        <th> 고유림 </th>
+                        <th> 20 </th>
+                        <th> 여 </th>
+                    </tr>
+                </table>
+            
+    </body>
+    <hr>
+    <h2> LLM </h2>
+    <form>
+        <fieldset>
+            <legend> Login </legend>
+            <label for="id"> ID: </label>
+            <input type="text" name="username" placeholder="사용자 이름">
+            
+            <label for="password"> PW: </label>
+            <input type="text" name="username" placeholder="비밀번호">
+
+            <input type="submit" value="로그인">
+        </fieldset>
+    </form>
+
+    <form action="#" method="post">
+        <fieldset>
+
+
+            <select>
+                <optgroup label="o1">
+                    <product value="o1-mini"> o1-mini </product>
+                    <product value="o1-preview"> o1-preview </product>
+                </optgroup>
+                <optgroup label="4o">
+                    <product value="gpt-4o-mini"> gpt-4o-mini </product>
+                    <product value="gpt-4o"> gpt-4o </product>
+                </optgroup>
+            </select>
+            
+            <input type="radio" name="model"> o1-mini
+            <input type="radio" name="model"> o1-preview
+            <input type="radio" name="model"> gpt-4o-mini
+            <input type="radio" name="model"> gpt-4o
+
+            <br>
+
+            <input type="file" name="prompt_file" accept=".txt, .text" multiple>
+
+            <br>
+
+            <input type="checkbox" name="product"> temperature </input>
+            <input type="checkbox" name="product"> max token </input>
+
+            <br>
+
+            <legend> Prompt </legend>
+            <label for="prompt"> prompt: </label>
+            <br>
+            <textarea name="prompt" cols="100" rows="10" placeholder="프롬프트를 입력하세요."></textarea>
+            <br>
+            <input type="submit" value="제출">
+
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend> 개인 정보 </legend>
+            <br>
+            <label for="id"> 이름 </label>
+            <input type="text" name="username" placeholder="여백없이 입력">
+            <br>
+            <label for="id"> 연락처 </label>
+            <input type="text" name="username" placeholder="연락가능한 번호">
+        </fieldset>
+        <fieldset>
+            <legend> 배송지 정보 </legend>
+            <br>
+            <label for="address"> 주소 </label>
+            <input type="text" name="username">
+            <br>
+            <label for="telephone"> 전화번호 </label>
+            <input type="text" name="username">
+        </fieldset>    
+        <br>
+        <fieldset>
+            <legend> 주문 정보 </legend>
+            <br>
+            <input type="checkbox" name="product"> 과테말라 안티구아 (100g)
+            <input type="text" name="username">
+            <label for="id"> 개 </label>
+            <br>
+            <input type="checkbox" name="product"> 인도네시아 만델링 (100g)
+            <input type="text" name="username">
+            <label for="id"> 개 </label>
+            <br>
+            <input type="checkbox" name="product"> 탐라는 도다 (100g)
+            <input type="text" name="username">
+            <label for="id"> 개 </label>
+        </fieldset>    
+    </form>
+</html>

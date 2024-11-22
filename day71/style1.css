@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.jumbotron {
+    padding: 30px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.container {
+
+}
+
+.navbar {
+    border: none;
+    font-size: 13px;
+    font-weight: 300;
+    min-height: 45px;
+    margin-bottom: 21px;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    border-color: #222222;
+    background-color: #333333;
+}
+
+.navbar-brand {
+    font-size: 19px;
+}
+
+.navbar-nav > li {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+}

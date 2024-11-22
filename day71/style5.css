@@ -1,0 +1,21 @@
+* {
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.sub-header {
+    color: red;
+}
+
+.header {
+    border: 20px;
+
+    text-align: left;
+    color: white;
+    background-color: black;
+}
+
+.highlight {
+    color: blue;
+}
