@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Hello, world!</title>
+        <style>
+            .fadeIn {
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+            }
+    
+            .fadeIn.visible {
+                opacity: 1;
+            }
+    
+            .box {
+                height: 300px;
+                margin: 50px 0;
+                background-color: #6fa3ef;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body>
+        <h1> AI </h1>
+            <h2> Machine Learning </h2>
+                <img src="https://miro.medium.com/v2/resize:fit:2796/1*FUZS9K4JPqzfXDcC83BQTw.png" alt="machine learning category" width=700> 
+                <div id="box supervised_learning">
+                    <h3> Supervised Learning </h3>
+                        <p> <b> 지도학습 </b></p>
+                        <p> <strong> label </strong> 이 주어짐 </p>
+
+                        <p> 종류 </p>
+                        <ul>
+                            <li style="color: red"> 서포트 벡터 머신 (support vector machine) </li>
+                            <li> 은닉 마르코프 모델 (Hidden Markov model) </li>
+                            <li> 회귀 분석 (Regression) </li>
+                            <li> 신경망 (Neural network) </li>
+                            <li> 나이브 베이즈 분류 (Naive Bayes Classification) </li>
+                        </ul>
+                </div>
+                <img src="https://media.licdn.com/dms/image/v2/D5612AQGrXjLDQg8Rdw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1715248331357?e=2147483647&v=beta&t=c8wqZuKToU5iJpWRxuSkKaQT_qFLlzvCOmTifhLnYhA" width=700>
+                <div id="box unsupervised_learning">
+                    <h3> Unsupervised Learning </h3>
+                    <i> 비지도학습 </i>
+                    <br>
+                    <em> label </em> 이 없음
+
+                    <p> 종류 </p>
+                    <ol>
+                        <li> hierarchical clustering </li>
+                        <li> dbscan </li>
+                        <li> kmeans </li>
+                    </ol>                    
+                </div>
+                <img src="https://techvidvan.com/tutorials/wp-content/uploads/2020/08/Reinforcement-Learning-in-ML-TV.jpg" width=700>
+                <div id="box reinforcement_learning">
+                    <h3> Reinforcement Learning </h3>
+                    <p> <u> 강화학습 </u> </p>
+                    <p> 보상을 최대화 </p>
+
+                    <p> 종류 </p>
+                    <ul>
+                        <li> model-free RL </li>
+                        <li> model-based RL </li>
+                    </ul>
+
+                    <p> model-free RL </p>
+                    <ol>
+                        <li> Value Iteration </li>
+                        <li> Policy Iteration </li>
+                    </ol>
+
+                    <p> model-based RL </p>
+                    <ol>
+                        <li> Given the Model </li>
+                        <li> Learn the Model </li>
+                    </ol>
+
+                    <table>
+                        <tr>
+                            <th> Given the Model </th>
+                            <th> Learn the Model </th>
+                        </tr>
+                        <tr>
+                            <td> Dyna-Q </td>
+                            <td> World Models </td>
+                        </tr>
+                        <tr>
+                            <td> Alpha Zero </td>
+                            <td> I2A </td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td> MBMF </td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td> MBVE </td>
+                        </tr>
+                    </table>
+                </div>
+        <script>
+            const fadeInElements = document.querySelectorAll(".fadeIn")
+
+            function checkVisibility() {
+                const windowHeight = window.innerHeight;
+                fadeInElements.forEach(element => {
+                    const rectangle = element.getBoundingClientRect();
+                    if (rectangle.top <= windowHeight - 200) {
+                        element.classList.add("visible")
+                    }
+                })
+            }
+
+            window.addEventListener("scroll", checkVisibility);
+            window.addEventListener("load", checkVisibility);
+        </script>    
+    </body>
+</html>

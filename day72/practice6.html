@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Title
+        </title>
+        <style>
+            .fadeIn {
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+            }
+    
+            .fadeIn.visible {
+                opacity: 1;
+            }
+    
+            .box {
+                height: 300px;
+                margin: 50px 0;
+                background-color: #6fa3ef;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box fadeIn" style="height: 500px"> First </div>
+        <div class="box fadeIn"> Second </div>
+        <div class="box fadeIn"> Third </div>
+
+        <script>
+            const fadeInElements = document.querySelectorAll(".fadeIn")
+
+            function checkVisibility() {
+                const windowHeight = window.innerHeight;
+                fadeInElements.forEach(element => {
+                    const rectangle = element.getBoundingClientRect();
+                    if (rectangle.top <= windowHeight - 200) {
+                        element.classList.add("visible")
+                    }
+                })
+            }
+
+            window.addEventListener("scroll", checkVisibility);
+            window.addEventListener("load", checkVisibility);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h2>
+            콘텐츠 추가하기
+        </h2>
+        <button id="addContents">콘텐츠 추가</button>
+        <div id="contentsArea"></div>
+        <script>
+            let imglist = [
+                "https://i.namu.wiki/i/_OBD1taipoW2IFltfh7kPz2eSrPaKd05P-AsN3AqqAGUAZ-m-7EiA2o8" +
+                        "iOk-SKboYebUX7L7E06-KNQBat3r2A.webp",
+                "https://i.namu.wiki/i/pHy5SAwm3_4JpPrynOHtACqbu_OqWfiDPC4CqaBKhkRqYgkehS9wVjnO" +
+                        "r4UeqmNrNllb7Py-tLbHwD8PMxva1A.webp",
+                "https://i.namu.wiki/i/xZr2dbPytysrk0LuNJPUWzVZFTWCdgiv82icZ9g4WF90bAHrtwj63y0g" +
+                        "ymihzqCNb5gW9YS15a0dgl96jnHyMA.webp",
+                "https://i.namu.wiki/i/7X6UlEYpoe1Z9ZX2VNZXlfbNTGyLTom_SCnV4LukSaA6keOqtWFnEw7u" +
+                        "uljD0zVqGQM3uD1EhhFs-eyuq3ngqw.webp",
+                "https://i.namu.wiki/i/4AowaZQlUd-vZxc90Fv6tCiv8zTIa7KyZyzQHXeaqxY_nQfAE5UwXQwd" +
+                        "zacOS6IoDVK03CGQmA_f-ZazTKphmA.webp",
+                "https://i.namu.wiki/i/PEANd8OW0rdr4v7om19QFZWnmzJLO6r3jRXcrGum3ftDUAyuFoUYqHa4" +
+                        "ReDVJvwfaSh_1Y-Y4u3viBUI55knjQ.webp",
+                "https://i.namu.wiki/i/U-YyPAlp4JzLuOPHBmL2v8YUwNZau1HWZ-3-Cdp1ioRcDPuHp444rjXz" +
+                        "Db_M_4tXGwuY9pWh0eWlIukGEbBF9A.webp"
+            ]
+            let index = 0;
+            document
+                .getElementById("addContents")
+                .addEventListener("click", () => {
+                    const newImg = document.createElement("img");
+                    newImg.src = imglist[index++% imglist.length];
+                    // newImg.width = "200px";
+                    // newImg.height = "200px";
+                    
+                    const newDiv = document.createElement("div");
+                    newDiv.textContent = "New Contents Are Added";
+                    
+                    document
+                        .getElementById("contentsArea")
+                        .appendChild(newImg);
+                    document
+                        .getElementById("contentsArea")
+                        .appendChild(newDiv);
+                });
+        </script>
+    </body>
+</html>

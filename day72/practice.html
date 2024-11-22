@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            slider 
+        </title>
+    </head>
+    <body>
+        <!-- <div id="slider">
+            <img src="https://via.placeholder.com/500x300/FF0000", style="opacity: 1">
+            <img src="https://via.placeholder.com/500x300/00FF00", style="opacity: 0">
+            <img src="https://via.placeholder.com/500x300/0000FF", style="opacity: 0">
+        </div> -->
+        <div id="slider">
+            <img src="https://i.namu.wiki/i/_hxslfBMVK2z3TW6evmGpKUwN_oRBiUunB27CuCO668QYck8VjhvX6qmkZu01KtNzGxbfsmmfFJYACrSrKqtel40CehO7tL3pA25hz9Xuk_uHrFEh4U2yw0DtW9tDd-BYE4qmJMId6i87G7ACGWObQ.webp", width=250 height=250 style="opacity: 1;">
+            <img src="https://i.namu.wiki/i/hhPZ5WERB-ATAdOQUwhID9fAwBcIvUZdyTIu8xanwiwgWh4CVP79GHlrsYlESUVD_2O2Y2ILBAlXs_Z_eX2GP9Wp8GTV5Hh_LAJ-sKAKQ-M9ajer8EwCxjUfnBVF4og7MNK3dlWyrM1sSE62XLJbzw.webp", width=250 height=250 style="opacity: 0;">
+            <img src="https://i.namu.wiki/i/A2v1mAgGLlXdyAJ5LbM9-OesmcPq4DLluynIhnTrQNA1DOdUQbWo0QTxwIww4NhNLMN0Azumg0APuAJrUdB9de-Dr_YKJellkpVPsiHEtkYT6vnc9rx6ii58gizbz8b-gpRKhpnw24Nh22EHrSBbmQ.webp", width=250 height=250 style="opacity: 0;">
+            <img src="https://i.namu.wiki/i/nnDfak2zrRDfGtSfkYnlEc3mr5ZD0jUtmcmRO_a-iYsvDeSw9XrxiYLZjAmsGLSYP-fLs8xqussosx5_rmEK9-dD9TTpXt61OVBDsCkEyOefzIHRCx6JjrTtRHb3pvZ03V1Ut6g-Il9Wk4G52VRo2Q.webp", width=250 height=250 style="opacity: 0;">
+            <img src="https://i.namu.wiki/i/LVkD1pUvsIT8xX3xpcU3bUMJJzfvjXS4D4oYC-LCy-P39LK-VWKiE9PqYy08LSfaBl876akrQJWFpXGgBQoGXwnuYnlDuatLqtqVz7dA7IVuo_eVb7ixl3rn3ZFbilEaxgbOYYi9ABf7Al77MdTHjw.webp", width=250 height=250 style="opacity: 0;">
+            <img src="https://i.namu.wiki/i/ZD4srrefkEdA1h2L56zdwt_VIYkS4inBKRsnTFMNdAc2pZgbdaLmLZES1Nrsz8LZ_658akLJukbDCgpXEQgXJDpeHe8F2WLW2j6rO44-I5bfbRY03eumaBX_rmCfXfabKn-Nqba_eVgyx2R_2aTldw.webp", width=250 height=250 style="opacity: 0;">
+            <img src="https://i.namu.wiki/i/je34VQ9wnpiWtY2AO2BYkhTPP8l29Zw37oXrjtOIOigu43mgHBUjX9lWt0r1fijAIxEQ290wvNXilk6TkHfHh4H2si-8OUUsOc2LqJew_5dE4VE0BiWbyiTYY8BrztUb7cChTFuz8JO4x1KhCOW5Cw.webp", width=250 height=250 style="opacity: 0;">
+        </div>
+        <div>
+            <button type="button" id="changeSlideButton"> 누르면? </button>
+        </div>
+        <script>
+            let currentIndex = 0;
+            
+            document.getElementById("addContents").addEventListener("click") () => {
+                const newImage = document.createElement("img");
+                newImage.src = imageUrls[currentIndex];
+                document.getElementById("contentsArea").appendChild(newImage)
+                if (currentIndex < 6) {
+                    currentIndex++;
+                }
+            }
+        </script>
+    </body>
+</html>
