@@ -1,0 +1,38 @@
+#supervised_learning {
+    background-color: blueviolet;
+}
+
+#supervised_learning li {
+    color: blue;
+    font-size: 16px;
+}
+
+#unsupervised_learning li {
+    color: red;
+    font-size: 14px;
+}
+
+#reinforcement_learning ul > li {
+    color: green;
+    font-size: 14px;
+}
+
+#reinforcement_learning ol > li {
+    color: yellow;
+    font-size: 20px;
+}
+
+/*
+unsupervised:
+    - color: red
+    - font-size: 14
+
+reinforcement_learning
+    ul
+    - color: green
+    - font-size: 14
+
+    ol
+    - color: yellow
+    - font-size: 20
+*/
