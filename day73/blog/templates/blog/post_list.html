@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% block main_area %}
+                  <!-- Featured blog post-->
+                  {% for post in post_list %}
+                  <div class="card mb-4">
+                    {% if post.head_image %}
+                      <a href="#!"><img class="card-img-top" src="{{post.head_image.url}}" alt="{{ post }} head image" /></a>
+                      {% endif %}
+                      <div class="card-body">
+                          <div class="small text-muted">{{ post.created_at}}</div>
+                          <h2 class="card-title">{{ post.title }}</h2>
+                          <p class="card-text">{{ post.content }}</p>
+                          <a class="btn btn-primary" href="{{ post.get_absolute_url }}">Read more →</a>
+                      </div>
+                  </div>
+                  {% endfor %}
+{% endblock %}
