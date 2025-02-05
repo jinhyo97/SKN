@@ -1,2 +1,2 @@
 # SKN
-SKN
+ML, DL, NLP, LLM, RAG
